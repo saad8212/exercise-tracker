@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 let activitySchema = new mongoose.Schema({
   name: {
     type:String,
-    required: true,
-    unique: true,
   },
   description: {
     type:String,
@@ -17,8 +15,12 @@ let activitySchema = new mongoose.Schema({
     type:String,
     required: true,
   } ,
-  date:String,
-  userId:String,
+  date:{
+    type:String,
+  },
+  userId:{
+    type:String,
+  },
 });
 const Activity = mongoose.model("Activity", activitySchema);
 module.exports = Activity;
