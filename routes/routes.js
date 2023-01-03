@@ -35,8 +35,8 @@ let verifyToken = (req, res, next) => {
 //user routes
 router.get("/", main);
 
-router.post("/register",register);
-router.post("/login", login);
+router.post("register",register);
+router.post("login", login);
 
 // Activity Routes
 router.get("/activity/:id", get_activities);
