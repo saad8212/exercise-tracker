@@ -8,7 +8,9 @@ mongoose.connect(`mongodb://localhost:27017/e-com`).then(res =>{
 }).catch(err=>{
     console.log("error connecting to database, ", err);
 })
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 app.use(express.json())
 app.use('/', require("./routes/routes"));
 app.listen("3005");
